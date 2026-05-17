@@ -3,57 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sparrowhawk App</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sparrowhawk | Privacy-Focused RSS Reader for Android</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="hero">
-        <div class="container">
-            <img src="sparrowhawk_blue_whiteback.png" alt="Sparrowhawk Logo" class="app-logo">
-            <h1>Sparrowhawk</h1>
-            <p class="tagline">High-flying connectivity and smart tracking at your fingertips.</p>
+    <header>
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="Sparrowhawk Logo">
+                <span>Sparrowhawk</span>
+            </a>
+            <nav>
+                <a href="#features" class="btn-primary" style="background: transparent; color: var(--primary-color);">Features</a>
+            </nav>
         </div>
     </header>
 
-    <section class="about-app">
-        <div class="container">
-            <h2>What is Sparrowhawk?</h2>
-            <p class="description">
-                Sparrowhawk is designed to streamline your digital workflows, combining swift data processing with intuitive network awareness. Inspired by the agile precision of its namesake, the app ensures your data transitions are sharp, secure, and fully optimized.
-            </p>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Swift Performance</h3>
-                    <p>Track processes and data pipelines seamlessly with zero overhead or resource bottlenecks.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Intelligent Tracking</h3>
-                    <p>Keep your active sessions organized with smart queueing systems and dynamic updates.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Modern Presentation</h3>
-                    <p>A clean UI built strictly around Material token guidelines for cross-platform ease.</p>
-                </div>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Sparrowhawk</h1>
+                <p>A modern, privacy-focused, and highly customizable RSS reader for Android. Built for readers who value speed, simplicity, and control.</p>
+                <a href="https://github.com/your-username/sparrowhawk" class="btn-primary">View on GitHub</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="about-developer">
-        <div class="container">
-            <h2>Meet the Developer</h2>
-            <div class="dev-profile">
-                <p>
-                    Hi, I am the creator of Sparrowhawk. I focus on building lightweight, modern applications that bridge creative intuition with highly clean architectural frameworks. This project was developed utilizing a fluid "vibe coding" loop—allowing rapid visual prototyping while ensuring deterministic testing and strict code audits form its baseline foundation.
-                </p>
+        <section id="features" class="container">
+            <h2 style="text-align: center; font-size: 2.5rem;">Why Sparrowhawk?</h2>
+            <div class="features-grid">
+                <!-- Data: Premium Reading -->
+                <div class="feature-card">
+                    <h3>📖 Premium Reading</h3>
+                    <p>Full preservation of article formatting with professional typography and smart navigation that prevents annoying list jumps.</p>
+                </div>
+
+                <!-- Data: Smart Discovery -->
+                <div class="feature-card">
+                    <h3>🛠️ Powerful Management</h3>
+                    <p>Automated feed discovery—just paste a website URL. Organize your sources with custom categories and OPML support.</p>
+                </div>
+
+                <!-- Data: Customization -->
+                <div class="feature-card">
+                    <h3>🎨 Deep Customization</h3>
+                    <p>Material 3 interface with Light and Dark modes. Choose your favorite Google Fonts for a truly personal reading experience.</p>
+                </div>
+
+                <!-- Data: Privacy -->
+                <div class="feature-card">
+                    <h3>🧹 Privacy First</h3>
+                    <p>All data stays on your device. Local Room database storage and foreground-only maintenance preserve your battery and privacy.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="container">
+            <div class="developer-section">
+                <div class="developer-content">
+                    <div class="dev-text">
+                        <h2>Meet the Developer</h2>
+                        <p>Hi! I'm the creator of Sparrowhawk. I built this app because I wanted an RSS reader that respected my privacy while providing a high-quality reading experience that felt native to modern Android.</p>
+                        <p style="margin-top: 16px;">My goal is to keep Sparrowhawk fast, lightweight, and open-source.</p>
+                    </div>
+                    <!-- Optional: Add a profile picture slot here -->
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Sparrowhawk App. All rights reserved.</p>
+            <p>&copy; 2024 Sparrowhawk Project. Built with Kotlin & Jetpack Compose.</p>
+            <p style="margin-top: 8px; font-size: 0.8rem;">Inspired by Material 3 Design.</p>
         </div>
     </footer>
 
