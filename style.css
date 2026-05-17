@@ -265,5 +265,11 @@ footer {
     .developer-content {
         text-align: center;
         flex-direction: column;
+        padding: calc(var(--spacing-unit) * 4);
+    }
+
+    .dev-text {
+        min-width: unset;
+        width: 100%;
     }
 }
