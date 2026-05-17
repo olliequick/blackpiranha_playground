@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sparrowhawk News Reader | Enabling your doomscrolling in style</title>
+    <title>Sparrowhawk News Reader | Enabling your doomscrolling in comfort and style</title>
     <link rel="stylesheet" href="style.css">
+    <script src="releases.js"></script>
 </head>
 <body>
 
@@ -24,49 +25,99 @@
         <section class="hero">
             <div class="container">
                 <h1>Sparrowhawk</h1>
-				<h2>Enabling your doomscrolling in style</h2>
+				<h2>Enabling your doomscrolling in comfort and style</h2>
                 <p>A modern RSS reader for Android. Built for readers who value simplicity. And those who really want buttons to navigate between articles.</p>
 <!--                <a href="https://github.com/your-username/sparrowhawk" class="btn-primary">View on GitHub</a> -->
             </div>
         </section>
 
         <section id="features" class="container">
-            <h2 style="text-align: center; font-size: 2.5rem;">Why Sparrowhawk?</h2>
-            <div class="features-grid">
-                <!-- Data: Premium Reading -->
-                <div class="feature-card">
-                    <h3>📖 Simple yet modern reading interface</h3>
-                    <p>Developed with a modern interface. Plus why aren't there more apps with buttons to navigate between articles? If there were I wouldn't have needed to develop Sparrowhawk. An overreaction, maybe, but I'm happy.</p>
+            <div class="main-content-wrapper">
+                <div class="primary-content">
+                    <h2 style="font-size: 2.5rem;">Why Sparrowhawk?</h2>
+                    <div class="features-grid">
+                        <!-- Data: Premium Reading -->
+                        <div class="feature-card">
+                            <h3>📖 Modern Reading Interface</h3>
+                            <p>Developed with a modern interface. Plus why aren't there more apps with buttons to navigate between articles? If there were I wouldn't have needed to develop Sparrowhawk. An overreaction, maybe, but I'm happy.</p>
+                        </div>
+
+                        <!-- Data: Smart Discovery -->
+                        <div class="feature-card">
+                            <h3>🛠️ Powerful Management</h3>
+                            <p>Automated feed discovery—just paste a website URL. Organize your sources with custom categories and OPML support.</p>
+                        </div>
+
+                        <!-- Data: Customization -->
+                        <div class="feature-card">
+                            <h3>🎨 Deep Customization</h3>
+                            <p>Material 3 interface with Light and Dark modes. Choose your favorite Google Fonts for a truly personal reading experience.</p>
+                        </div>
+
+                        <!-- Data: Privacy -->
+                        <div class="feature-card">
+                            <h3>🧹 Privacy First</h3>
+                            <p>All data stays on your device. Local storage and foreground-only maintenance preserve your battery and privacy. No logins required.</p>
+                        </div>
+						<!-- Data: Price -->
+                        <div class="feature-card">
+                            <h3>🧹 Free!</h3>
+                            <p>You can use Sparrowhawk without limitations for free. I've yet to implement a completely voluntary donation mechanism yet, but even when I do, the app will remain free.</p>
+                        </div>
+
+                    </div>
                 </div>
 
-                <!-- Data: Smart Discovery -->
-                <div class="feature-card">
-                    <h3>🛠️ Powerful Management</h3>
-                    <p>Automated feed discovery—just paste a website URL. Organize your sources with custom categories and OPML support.</p>
-                </div>
-
-                <!-- Data: Customization -->
-                <div class="feature-card">
-                    <h3>🎨 Deep Customization</h3>
-                    <p>Material 3 interface with Light and Dark modes. Choose your favorite Google Fonts for a truly personal reading experience.</p>
-                </div>
-
-                <!-- Data: Privacy -->
-                <div class="feature-card">
-                    <h3>🧹 Privacy First</h3>
-                    <p>All data stays on your device. Local storage and foreground-only maintenance preserve your battery and privacy. No logins required.</p>
-                </div>
+                <aside class="sidebar">
+                    <div class="sidebar-card">
+                        <h3>Release Notes</h3>
+                        <div id="release-notes-container">
+                            <p>Loading updates...</p>
+                        </div>
+                    </div>
+                </aside>
             </div>
         </section>
+
+        <script>
+            // Populate release notes from the SPARROWHAWK_RELEASES variable in releases.js
+            try {
+                const container = document.getElementById('release-notes-container');
+                container.innerHTML = ''; // Clear loading message
+
+                if (typeof SPARROWHAWK_RELEASES !== 'undefined' && SPARROWHAWK_RELEASES.length > 0) {
+                    SPARROWHAWK_RELEASES.forEach(release => {
+                        const releaseEl = document.createElement('div');
+                        releaseEl.className = 'release-item';
+
+                        const notesHtml = release.notes.map(note => `<li>${note}</li>`).join('');
+
+                        releaseEl.innerHTML = `
+                            <span class="release-version">v${release.version}</span>
+                            <span class="release-date">${release.date}</span>
+                            <ul class="release-notes">
+                                ${notesHtml}
+                            </ul>
+                        `;
+                        container.appendChild(releaseEl);
+                    });
+                } else {
+                    container.innerHTML = '<p>No updates found.</p>';
+                }
+            } catch (error) {
+                console.error('Error loading release notes:', error);
+                document.getElementById('release-notes-container').innerHTML = '<p>Could not load updates.</p>';
+            }
+        </script>
 
         <section class="container">
             <div class="developer-section">
                 <div class="developer-content">
                     <div class="dev-text">
                         <h2>Meet the Developer</h2>
-                        <p>Hi! My name is Donny,and I built this app because I wanted an RSS reader that's simple, had some simple navigation controls that doesn't require me to constantly swipe as I'm browsing, while providing a high-quality reading experience that felt native to modern Android.</p>
-                        <p style="margin-top: 16px;">My goal is to keep Sparrowhawk simple,fast and lightweight.</p>
-						<p style="margin-top: 16px;">Send me feedback at sparrowhawk.app (at) blackpiranha.net</p>
+                        <p>Hi! My name is Donny, and I built this app because I wanted an RSS reader that's simple, had some simple navigation controls that doesn't require me to constantly swipe as I'm browsing, while providing a high-quality reading experience that felt native to modern Android.</p>
+                        <p style="margin-top: 16px;">My goal is to keep Sparrowhawk fast and lightweight.</p>
+						<p style="margin-top: 16px;">Send me feedback and bug reports at sparrowhawk.app (at) blackpiranha.net</p>
                     </div>
                     <!-- Optional: Add a profile picture slot here -->
                 </div>
@@ -76,7 +127,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 A Blackpiranha Playground Project. Built with desperation to keep up with this ridiculously fast changing world.</p>
+            <p>&copy; 2026 A Blackpiranha Playground Project. Built with desperation to keep up with this ridiculously fast-changing world.</p>
             <p style="margin-top: 8px; font-size: 0.8rem;">Inspired by Material 3 Design.</p>
         </div>
     </footer>
