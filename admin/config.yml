@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: your-username/your-repository-name # Replace with your GitHub handle/repo
+  branch: main # or master
+
+# Where media files (images, screenshots) will be saved
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Define the collections you want to edit via the UI
+collections:
+  - name: "apps"
+    label: "App Pages"
+    folder: "content/apps"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "App Name", name: "title", widget: "string" }
+      - { label: "App Description", name: "description", widget: "text" }
+      - { label: "Play Store URL", name: "play_store_url", widget: "string" }
+      - { label: "App Icon", name: "icon", widget: "image" }
+      - { label: "Page Content", name: "body", widget: "markdown" }
