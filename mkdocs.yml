@@ -1,0 +1,43 @@
+site_name: Blackpiranha
+site_url: https://blackpiranha.net/
+site_description: Android Apps by Blackpiranha
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: teal
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: teal
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Sparrowhawk:
+      - Overview: sparrowhawk/index.md
+      - Privacy Policy: sparrowhawk/privacy.md
+  - Eat What Ah:
+      - Overview: eat-what-ah/index.md
+      - Privacy Policy: eat-what-ah/privacy.md
+  - Type Affair:
+      - Overview: type-affair/index.md
+      - Privacy Policy: type-affair/privacy.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
