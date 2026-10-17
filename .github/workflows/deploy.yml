@@ -31,8 +31,30 @@ jobs:
       - name: Install site dependencies
         run: python -m pip install -r requirements.txt
 
-      - name: Build MkDocs site
-        run: mkdocs build --strict
+      - name: Build root portal and mini-sites
+        run: |
+          # 1. Initialize clean site output directory
+          rm -rf site
+          mkdir -p site
+
+          # 2. Copy root portal files into site/
+          cp index.html site/
+          cp style.css site/
+          cp CNAME site/
+          touch site/.nojekyll
+          if [ -d "assets" ]; then cp -r assets site/; fi
+          if [ -f "privacy.html" ]; then cp privacy.html site/; fi
+          if [ -f "releases.js" ]; then cp releases.js site/; fi
+          if [ -f "sparrowhawk_blue_whiteback.png" ]; then cp sparrowhawk_blue_whiteback.png site/; fi
+
+          # 3. Discover and build each subfolder mini-site
+          for config in */mkdocs.yml; do
+            if [ -f "$config" ]; then
+              project=$(dirname "$config")
+              echo "==> Building mini-site for: $project"
+              mkdocs build -f "$config" -d "../site/$project" --strict
+            fi
+          done
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
