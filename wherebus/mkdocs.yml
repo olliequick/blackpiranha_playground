@@ -1,0 +1,49 @@
+site_name: WhereBus
+site_url: https://playground.blackpiranha.net/wherebus/
+site_description: A large-display bus arrival dashboard for Android tablets and devices, designed for home common areas to time your departure precisely.
+site_author: Donny (Blackpiranha)
+
+theme:
+  name: material
+  language: en
+  palette:
+    # Light mode palette
+    - scheme: default
+      primary: indigo
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode palette
+    - scheme: slate
+      primary: indigo
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+
+nav:
+  - Overview: index.md
+  - Privacy Policy: privacy.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
