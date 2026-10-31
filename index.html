@@ -3,118 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blackpiranha | Android Apps & Documentation</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Blackpiranha</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 650px;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        .logo-container img {
+            max-width: 220px;
+            height: auto;
+        }
+        .app-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .app-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            background: #111111;
+            border: 1px solid #222222;
+            border-radius: 12px;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+        .app-row:hover {
+            background: #181818;
+            border-color: #333333;
+        }
+        .app-link {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            color: inherit;
+        }
+        .app-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            object-fit: cover;
+            background: #222;
+        }
+        .app-name {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        .app-link:hover .app-name {
+            color: #38bdf8;
+        }
+        .app-desc {
+            font-size: 0.9rem;
+            color: #9ca3af;
+            text-align: right;
+            max-width: 320px;
+            margin-left: 16px;
+        }
+        @media (max-width: 650px) {
+            .app-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .app-desc {
+                text-align: left;
+                max-width: 100%;
+                margin-left: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <header>
-        <div class="container nav-content">
-            <a href="#" class="logo">
-                <img src="assets/logo.png" alt="Blackpiranha Logo">
-                <span>Blackpiranha</span>
-            </a>
-            <nav>
-                <a href="#apps" class="btn-primary" style="background: transparent; color: var(--primary-color);">Apps</a>
-                <a href="#about" class="btn-primary" style="background: transparent; color: var(--primary-color);">About</a>
-            </nav>
+    <div class="container">
+        <div class="logo-container">
+            <img src="assets/blackpiranha_trans_white.png" alt="Blackpiranha">
         </div>
-    </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Blackpiranha</h1>
-                <h2>Native Android Apps & Documentation Playground</h2>
-                <p>Simple, privacy-first, and beautifully engineered Android utilities. Explore each application's dedicated documentation, features, and release history below.</p>
-                <a href="#apps" class="btn-primary">Explore Apps</a>
+        <div class="app-list">
+            <div class="app-row">
+                <a href="sparrowhawk/" class="app-link">
+                    <img src="assets/logo_sparrowhawk.png" alt="Sparrowhawk" class="app-icon">
+                    <span class="app-name">Sparrowhawk</span>
+                </a>
+                <div class="app-desc">A modern, privacy-first RSS reader for Android.</div>
             </div>
-        </section>
 
-        <section id="apps" class="container">
-            <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 12px;">Our Applications</h2>
-            <p style="text-align: center; color: var(--on-surface-variant); max-width: 650px; margin: 0 auto 32px;">Each app is maintained with its own dedicated documentation mini-site powered by Material for MkDocs.</p>
-
-            <div class="features-grid">
-                <!-- Sparrowhawk -->
-                <div class="feature-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div style="font-size: 2rem; margin-bottom: 8px;">🦅</div>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Sparrowhawk</h3>
-                        <p style="font-weight: 600; color: var(--accent-color); font-size: 0.85rem; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">RSS News Reader</p>
-                        <p>A modern, privacy-first RSS reader for Android built for comfortable reading with dedicated physical/tactile article navigation buttons.</p>
-                    </div>
-                    <div style="margin-top: 24px;">
-                        <a href="sparrowhawk/" class="btn-primary" style="width: 100%; text-align: center; display: block;">Open Mini-Site &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- Eat What Ah -->
-                <div class="feature-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div style="font-size: 2rem; margin-bottom: 8px;">🍜</div>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Eat What Ah</h3>
-                        <p style="font-weight: 600; color: var(--accent-color); font-size: 0.85rem; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Food Companion</p>
-                        <p>A lightweight food companion app for Android to help you log favorite culinary spots and quickly break meal indecision.</p>
-                    </div>
-                    <div style="margin-top: 24px;">
-                        <a href="eat-what-ah/" class="btn-primary" style="width: 100%; text-align: center; display: block;">Open Mini-Site &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- Type Affair -->
-                <div class="feature-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div style="font-size: 2rem; margin-bottom: 8px;">🔤</div>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Type Affair</h3>
-                        <p style="font-weight: 600; color: var(--accent-color); font-size: 0.85rem; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Typography Utility</p>
-                        <p>A font preview and type inspection utility for Android developers and designers to evaluate typography against Material 3 standards.</p>
-                    </div>
-                    <div style="margin-top: 24px;">
-                        <a href="type-affair/" class="btn-primary" style="width: 100%; text-align: center; display: block;">Open Mini-Site &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- WhereBus -->
-                <div class="feature-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <div style="font-size: 2rem; margin-bottom: 8px;">🚌</div>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 8px;">WhereBus</h3>
-                        <p style="font-weight: 600; color: var(--accent-color); font-size: 0.85rem; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Bus Arrival Dashboard</p>
-                        <p>A large-display bus arrival dashboard for Android tablets and large form-factor devices, designed for home common areas to time your departure precisely.</p>
-                    </div>
-                    <div style="margin-top: 24px;">
-                        <a href="wherebus/" class="btn-primary" style="width: 100%; text-align: center; display: block;">Open Mini-Site &rarr;</a>
-                    </div>
-                </div>
+            <div class="app-row">
+                <a href="eat-what-ah/" class="app-link">
+                    <img src="assets/logo_eatwhatah.png" alt="Eat What Ah" class="app-icon">
+                    <span class="app-name">Eat What Ah</span>
+                </a>
+                <div class="app-desc">A lightweight food companion app to decide what to eat.</div>
             </div>
-        </section>
 
-        <section id="about" class="container">
-            <div class="developer-section">
-                <div class="developer-content">
-                    <div class="dev-text">
-                        <h2>About Blackpiranha</h2>
-                        <p>Hi! My name is Donny. Blackpiranha is my independent Android playground dedicated to crafting fast, clean, and privacy-respecting software.</p>
-                        <p style="margin-top: 16px;">Every application here runs on local-first storage, respects device battery and resources, and collects zero trackers or analytics.</p>
-                        <p style="margin-top: 16px;">Questions, feedback, or inquiries? Reach out at: <code>contact (at) blackpiranha.net</code></p>
-                    </div>
-                </div>
+            <div class="app-row">
+                <a href="type-affair/" class="app-link">
+                    <img src="assets/logo_typeaffair.png" alt="Type Affair" class="app-icon">
+                    <span class="app-name">Type Affair</span>
+                </a>
+                <div class="app-desc">A font testing and typography inspection tool for Android.</div>
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Blackpiranha. All rights reserved.</p>
-            <p style="margin-top: 8px; font-size: 0.8rem; color: var(--on-surface-variant);">
-                <a href="sparrowhawk/privacy/" style="color: inherit; text-decoration: underline; margin: 0 8px;">Sparrowhawk Privacy</a> &bull;
-                <a href="eat-what-ah/privacy/" style="color: inherit; text-decoration: underline; margin: 0 8px;">Eat What Ah Privacy</a> &bull;
-                <a href="type-affair/privacy/" style="color: inherit; text-decoration: underline; margin: 0 8px;">Type Affair Privacy</a> &bull;
-                <a href="wherebus/privacy/" style="color: inherit; text-decoration: underline; margin: 0 8px;">WhereBus Privacy</a>
-            </p>
+            <div class="app-row">
+                <a href="wherebus/" class="app-link">
+                    <img src="assets/logo_wherebus.png" alt="WhereBus" class="app-icon">
+                    <span class="app-name">WhereBus</span>
+                </a>
+                <div class="app-desc">A large-display bus arrival dashboard for tablets and devices.</div>
+            </div>
         </div>
-    </footer>
-
+    </div>
 </body>
 </html>
