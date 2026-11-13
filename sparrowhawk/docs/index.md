@@ -4,24 +4,56 @@
 
 A modern RSS reader for Android. Built for readers who value simplicity, clean typography, and dedicated buttons to navigate between articles.
 
+[Read Privacy Policy :material-shield-account:](privacy.md){ .md-button .md-button--primary }
+
+---
+
+## Overview
+
+Sparrowhawk is an RSS/Atom news reader designed to supercharge your reading habits. You can customize your reading experience in a silly number of ways, all in the service of making it easy for you to consume news in the most comfortable, convenient, and laziest way possible.
+
+There are a million news readers out there, but here are key features that set Sparrowhawk apart:
+
+1. **Gamepad Support** — Read news while propped up against a pillow with a mini-gamepad in hand under the blankets.
+2. **Custom Fonts** — Full support for custom typography for font enthusiasts.
+3. **Dynamic Font Resizing** — Easily adjust text sizes for presbyopia, astigmatism, or long-sightedness.
+4. **Button Navigation** — Dedicated, customizable navigation buttons designed for tablets and phone displays.
+5. **Material 3 Expressive UI** — Clean, modern Material Design 3 interface.
+
+!!! tip "Tactile Article Navigation"
+    When Google Reader was shut down, many migrated to alternative RSS apps. However, one key feature was often missing: dedicated next/previous article buttons. Tapping a physical or on-screen button to jump articles beats swiping every time. Sparrowhawk brings tactile button navigation back to RSS reading.
+
 ---
 
 ## Why Sparrowhawk?
 
-* **📖 Modern Reading Interface**  
-  Developed with a clean Material 3 interface. Features dedicated navigation buttons between articles without needing to constantly flick or swipe across the screen.
+<div class="grid cards" markdown>
 
-* **🛠️ Powerful Management**  
-  Automated feed discovery—just paste a website URL. Organize your sources with custom categories and full OPML import/export support.
+- :material-cellphone-text: **Modern Reading Interface**
 
-* **🎨 Deep Customization**  
-  Material 3 design with dynamic colors, Light and Dark themes, and support for Google Fonts to personalize your reading typography.
+    Developed with a clean Material 3 interface. Features dedicated navigation buttons between articles without needing to constantly flick or swipe across the screen.
 
-* **🧹 Privacy First**  
-  All data stays on your device. Local Room database storage and foreground-only maintenance preserve your battery and privacy with no logins required.
+- :material-tune-variant: **Powerful Feed Management**
 
-* **✨ Free!**  
-  Use Sparrowhawk without limitations for free.
+    Automated feed discovery—just paste a website URL. Organize your sources with custom categories and full OPML import/export support.
+
+- :material-palette-outline: **Deep Customization**
+
+    Material 3 design with dynamic colors, Light and Dark themes, and support for custom fonts to personalize your reading typography.
+
+- :material-gamepad-variant-outline: **Gamepad & Hardware Support**
+
+    Connect a mini-gamepad or use hardware volume buttons for hands-free, bed-side reading.
+
+- :material-shield-check: **Privacy First**
+
+    All data stays on your device. Local Room database storage and foreground-only maintenance preserve battery and privacy with no account required.
+
+- :material-gift-outline: **100% Free**
+
+    Use Sparrowhawk without limitations, paywalls, or advertisements.
+
+</div>
 
 ---
 
@@ -50,4 +82,4 @@ Hi! My name is Donny, and I built this app because I wanted an RSS reader that i
 
 Feedback and bug reports: `sparrowhawk.app (at) blackpiranha.net`
 
-[View Privacy Policy](privacy.md)
+[Read Privacy Policy :material-shield-account:](privacy.md){ .md-button }
